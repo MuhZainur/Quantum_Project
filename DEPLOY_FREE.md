@@ -20,7 +20,7 @@
 ### B. Upload Code
 1. Clone Space yang baru dibuat:
    ```bash
-   git clone https://huggingface.co/spaces/MuhZainur/retail-analytics-api
+   git clone https://huggingface.co/spaces/Zainajabroh/retail-analytics-api
    cd retail-analytics-api
    ```
 
@@ -42,7 +42,7 @@
 
 4. Tunggu build selesai (~10 menit). URL API Anda:
    ```
-   https://muhzainur-retail-analytics-api.hf.space
+   https://zainajabroh-retail-analytics-api.hf.space
    ```
 
 ---
@@ -69,7 +69,7 @@
 4. **Set Environment Variable:**
    - Klik "Environment Variables"
    - **Key:** `VITE_API_BASE_URL`
-   - **Value:** `https://muhzainur-retail-analytics-api.hf.space` (URL HF Space Anda)
+   - **Value:** `https://zainajabroh-retail-analytics-api.hf.space` (URL HF Space Anda)
    - Klik "Add"
 
 5. Klik **"Deploy"**
