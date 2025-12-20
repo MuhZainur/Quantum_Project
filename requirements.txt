@@ -1,0 +1,19 @@
+# Data Analytics & Science
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+imbalanced-learn
+joblib
+
+# Backend API
+fastapi
+uvicorn[standard]
+pydantic
+
+# MLOps & Testing
+evidently
+pytest
+httpx
