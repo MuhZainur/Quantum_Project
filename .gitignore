@@ -36,3 +36,6 @@ MLE/Backend/churn_logs.csv
 # OS
 .DS_Store
 Thumbs.db
+
+# Local Deployment Guide (not for public repo)
+DEPLOYMENT_GUIDE.md
