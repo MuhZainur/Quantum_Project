@@ -2,8 +2,6 @@
 *.csv
 *.xlsx
 *.xls
-*.json
-!stores_list.json
 
 # Exceptions (Safe aggregated data for App to work)
 # Uncomment the line below if you trust the aggregated/anonymized reference data
