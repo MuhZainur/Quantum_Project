@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./Backend
+    container_name: retail_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend/churn_logs.csv:/app/churn_logs.csv # Persist logs
+    restart: always
+
+  frontend:
+    build: ./Frontend
+    container_name: retail_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always

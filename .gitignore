@@ -1,0 +1,38 @@
+# Data Files (CRITICAL: Do not upload raw data)
+*.csv
+*.xlsx
+*.xls
+*.json
+!stores_list.json
+
+# Exceptions (Safe aggregated data for App to work)
+# Uncomment the line below if you trust the aggregated/anonymized reference data
+# !MLE/Backend/reference_churn_data.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+venv.bak/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs
+*.log
+MLE/Backend/churn_logs.csv
+
+# Models (Allowed, but can be ignored if too large > 100MB)
+# *.pkl 
+
+# Docker
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
