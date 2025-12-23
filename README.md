@@ -2,6 +2,14 @@
 
 An End-to-End Retail Analytics solution transforming raw transaction data into actionable AI insights. Ideally suited for Retail Strategy Teams to optimize sales forecasting and customer retention.
 
+## 🌐 Live Demo
+
+**🎯 Try it out:**
+- **Interactive Dashboard:** [quantum-project-fe-567427950134.asia-southeast2.run.app](https://quantum-project-fe-567427950134.asia-southeast2.run.app/)
+- **API Documentation:** [quantum-project-567427950134.asia-southeast2.run.app/docs](https://quantum-project-567427950134.asia-southeast2.run.app/docs)
+
+*Deployed on Google Cloud Run with automated CI/CD pipeline.*
+
 ---
 
 ## 🏗️ Architecture Overview
