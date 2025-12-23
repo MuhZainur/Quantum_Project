@@ -2,10 +2,8 @@ import pandas as pd
 import joblib
 import uvicorn
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from schemas import SalesInput, ChurnInput
-from monitoring_service import generate_churn_drift_report
 import os
 
 # Initialize App
@@ -112,15 +110,6 @@ def predict_churn(data: ChurnInput):
             'PREMIUM_CUSTOMER': input_data['premium_customer']
         }])
         
-        # --- LOGGING FOR DRIFT MONITORING ---
-        log_file = "churn_logs.csv"
-        # Append to CSV (create header if file doesn't exist)
-        try:
-            df_input.to_csv(log_file, mode='a', header=not os.path.exists(log_file), index=False)
-        except Exception as log_err:
-            print(f"Warning: Could not log data: {log_err}")
-        # ------------------------------------
-
         # Predict Class and Probability
         prediction = churn_model.predict(df_input)[0]
         prob = churn_model.predict_proba(df_input)[0][1] # Probability of Class 1 (Churn)
@@ -134,15 +123,7 @@ def predict_churn(data: ChurnInput):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.get("/monitoring/churn/drift")
-def churn_drift_report():
-    """Generates and returns the Evidently Data Drift Report"""
-    result = generate_churn_drift_report()
-    
-    if "error" in result:
-        raise HTTPException(status_code=400, detail=result["error"])
-        
-    return FileResponse(result["report_path"])
+
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

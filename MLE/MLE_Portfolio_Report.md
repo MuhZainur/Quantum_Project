@@ -9,7 +9,7 @@ We moved away from isolated Jupyter Notebooks to a modern Microservices-inspired
 
 *   **Backend:** FastAPI (Python) - High-performance API for serving models.
 *   **Frontend:** React (Vite + Tailwind CSS) - Interactive dashboard for business users.
-*   **MLOps Pipeline:** Automated Testing (CI), Data Drift Monitoring (Evidently AI), and Containerization (Docker).
+*   **MLOps Pipeline:** Automated Testing (CI/CD), Containerization (Docker), and Cloud Deployment (GCP ready).
 
 ---
 
@@ -36,11 +36,7 @@ def predict_churn(data: ChurnInput):
         'PREMIUM_CUSTOMER': input_data['premium_customer']
     }])
     
-    # 3. Log Data for Drift Monitoring
-    log_file = "churn_logs.csv"
-    df_input.to_csv(log_file, mode='a', header=not os.path.exists(log_file), index=False)
-    
-    # 4. Predict
+    # 3. Predict
     prediction = churn_model.predict(df_input)[0]
     prob = churn_model.predict_proba(df_input)[0][1]
     
@@ -81,20 +77,12 @@ const handleChurnSubmit = async (e) => {
 ## 4. MLOps: Ensuring Reliability
 A model in production is a living entity that can degrade. We implemented safeguards.
 
-### A. Data Drift Monitoring (Evidently AI)
-We integrated **Evidently AI** to automatically compare live production data (`churn_logs.csv`) against our training baseline (`reference_churn_data.csv`).
+### A. Cloud Deployment (GCP Cloud Run)
+The application is production-ready and can be deployed to Google Cloud Platform with minimal configuration.
 
-*   **Mechanism:** Every time `/predict/churn` is called, the input is logged.
-*   **Report:** An endpoint `/monitoring/churn/drift` generates a visual HTML report detecting distributional shifts (Data Drift).
-
-```python
-# H:\coding\Quantum_Virtual_Project\MLE\Backend\monitoring_service.py
-
-def generate_churn_drift_report():
-    report = Report(metrics=[DataDriftPreset()])
-    report.run(reference_data=reference_data, current_data=current_data)
-    report.save_html("churn_drift_report.html")
-```
+*   **Backend:** Fully containerized FastAPI service with auto-scaling
+*   **Frontend:** Static React app served through Nginx
+*   **Guide:** Complete deployment guide included in `DEPLOYMENT_CLOUD_RUN.md`
 
 ### B. CI/CD Pipeline (GitHub Actions)
 To prevent bad code from breaking production, we set up a Continuous Integration pipeline.

@@ -7,6 +7,5 @@ xgboost
 imbalanced-learn
 joblib
 pydantic
-evidently
 pytest
 httpx

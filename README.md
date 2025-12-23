@@ -26,7 +26,7 @@ This project simulates a real-world enterprise workflow, divided into three prof
 *   **MLOps:**
     *   **Docker:** Full containerization of Backend and Frontend.
     *   **CI/CD:** GitHub Actions for automated API testing (`pytest`).
-    *   **Monitoring:** **Evidently AI** for real-time Data Drift detection.
+    *   **Deployment:** Ready for GCP Cloud Run deployment.
 
 ---
 
@@ -37,7 +37,7 @@ This project simulates a real-world enterprise workflow, divided into three prof
 | **Data Science** | Python 3.10, Scikit-Learn, Pandas, NumPy, XGBoost, Imbalanced-learn |
 | **Backend API** | FastAPI, Uvicorn, Pydantic, Joblib |
 | **Frontend UI** | React.js, Vite, Tailwind CSS, Axios |
-| **MLOps** | Docker, Docker Compose, GitHub Actions, Evidently AI |
+| **MLOps** | Docker, Docker Compose, GitHub Actions |
 
 ---
 
@@ -64,7 +64,8 @@ The entire application can be launched with a single command using Docker Compos
 3.  **Access Services**
     *   **Web Dashboard:** [http://localhost:3000](http://localhost:3000)
     *   **API Docs (Swagger):** [http://localhost:8000/docs](http://localhost:8000/docs)
-    *   **Drift Report:** [http://localhost:8000/monitoring/churn/drift](http://localhost:8000/monitoring/churn/drift)
+
+> **📦 Ready to Deploy?** See [DEPLOYMENT_CLOUD_RUN.md](DEPLOYMENT_CLOUD_RUN.md) for GCP Cloud Run deployment guide.
 
 ---
 

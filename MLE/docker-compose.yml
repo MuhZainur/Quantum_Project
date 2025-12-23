@@ -6,8 +6,6 @@ services:
     container_name: retail_backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./Backend/churn_logs.csv:/app/churn_logs.csv # Persist logs
     restart: always
 
   frontend:
