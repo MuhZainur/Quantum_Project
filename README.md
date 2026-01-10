@@ -69,10 +69,6 @@ The entire application can be launched with a single command using Docker Compos
     docker-compose up --build
     ```
 
-3.  **Access Services**
-    *   **Web Dashboard:** [http://localhost:3000](http://localhost:3000)
-    *   **API Docs (Swagger):** [http://localhost:8000/docs](http://localhost:8000/docs)
-
 > **📦 Ready to Deploy?** See [DEPLOYMENT_CLOUD_RUN.md](DEPLOYMENT_CLOUD_RUN.md) for GCP Cloud Run deployment guide.
 
 ---
