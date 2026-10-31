@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const DEFAULT_BASE_URL = 'https://quantum-project.onrender.com';
+const DEFAULT_BASE_URL = 'https://quantum-project-yqlm.onrender.com';
 const API_BASE_URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || DEFAULT_BASE_URL;
 
 const API = axios.create({

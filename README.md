@@ -5,8 +5,8 @@ An End-to-End Retail Analytics solution transforming raw transaction data into a
 ## 🌐 Live Demo
 
 **🎯 Try it out:**
-- **Interactive Dashboard:** [Click to Open App 🚀](https://quantum-project.vercel.app/)
-- **API Documentation:** [Swagger UI 📄](https://quantum-project.onrender.com/docs)
+- **Interactive Dashboard:** [Click to Open App 🚀](https://quantum-project-pi.vercel.app/)
+- **API Documentation:** [Swagger UI 📄](https://quantum-project-yqlm.onrender.com/docs)
 
 *Deployed on Vercel (React Frontend) and Render (FastAPI Backend).*
 
