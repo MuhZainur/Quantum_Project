@@ -5,10 +5,10 @@ An End-to-End Retail Analytics solution transforming raw transaction data into a
 ## 🌐 Live Demo
 
 **🎯 Try it out:**
-- **Interactive Dashboard:** [quantum-project-fe-567427950134.asia-southeast2.run.app](https://quantum-project-fe-567427950134.asia-southeast2.run.app/)
-- **API Documentation:** [quantum-project-567427950134.asia-southeast2.run.app/docs](https://quantum-project-567427950134.asia-southeast2.run.app/docs)
+- **Interactive Dashboard:** [Click to Open App 🚀](https://quantum-project.vercel.app/)
+- **API Documentation:** [Swagger UI 📄](https://quantum-project.onrender.com/docs)
 
-*Deployed on Google Cloud Run with automated CI/CD pipeline.*
+*Deployed on Vercel (React Frontend) and Render (FastAPI Backend).*
 
 ---
 

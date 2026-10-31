@@ -35,7 +35,7 @@ function App() {
       const res = await predictSales(salesData);
       setResult(res);
     } catch (err) {
-      alert("Error predicting sales. Check backend connection.");
+      console.error("Sales error:", err);
     }
     setLoading(false);
   };
@@ -48,7 +48,7 @@ function App() {
       const res = await predictChurn(churnData);
       setResult(res);
     } catch (err) {
-      alert("Error predicting churn. Check backend connection.");
+      console.error("Churn error:", err);
     }
     setLoading(false);
   };
@@ -217,6 +217,12 @@ function App() {
                         }`}>
                         Risk Level: {result.risk_level}
                       </div>
+                    </div>
+                  )}
+
+                  {result.is_simulated && (
+                    <div className="mt-4 p-2 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-700">
+                      ⚡ Fast Demo Mode (Live Cloud Backend warming up)
                     </div>
                   )}
                 </div>

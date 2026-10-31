@@ -77,7 +77,7 @@ const handleChurnSubmit = async (e) => {
 ## 4. MLOps: Ensuring Reliability
 A model in production is a living entity that can degrade. We implemented safeguards.
 
-### A. Cloud Deployment (GCP Cloud Run)
+### A. Cloud Deployment (Render & Vercel)
 The application is production-ready and can be deployed to Google Cloud Platform with minimal configuration.
 
 *   **Backend:** Fully containerized FastAPI service with auto-scaling
