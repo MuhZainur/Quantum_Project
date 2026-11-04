@@ -59,8 +59,8 @@ The entire application can be launched with a single command using Docker Compos
 ### Steps
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/MuhZainur/quantum-retail-ai.git
-    cd quantum-retail-ai
+    git clone https://github.com/MuhZainur/Quantum_Project.git
+    cd Quantum_Project
     ```
 
 2.  **Launch Application**
